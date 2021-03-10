@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Voltage Control</title>
+</head>
+<body>
+    <div class="app-flexbox">
+        <div class="sliders-container-item big-shadow">
+          
+          <div class="slider-container button-wrapper">
+            <button class="start button">start</button>
+            <button class="pause button">pause</button>
+          </div>
+          
+          <div class="slider-container button-wrapper">
+            <button class="hoz button">horizontal</button>
+            <button class="vert button">vertical</button>
+          </div>
+      
+          <div class="slider-container">
+            <h3>Bolt Branches</h3>
+            <div class="branch slider">
+              <input 
+                type="range" 
+                min="1" 
+                max="100" 
+                value="20" 
+                class="slider-input" 
+                id="branch-input"
+              >
+            </div>
+          </div>
+          <div class="slider-container">
+            <h3>Bolt Spread</h3>
+            <div class="bolt-spread slider">
+              <input 
+                type="range" 
+                min="0" 
+                max="100" 
+                value="35" 
+                class="slider-input" 
+                id="bolt-spread-input"
+              >
+            </div>
+          </div>
+        </div>
+          
+        <div class="button-electricity-item">
+          <div class="electric-container big-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" >
+              <defs>
+              <filter id="f1" x="0" y="0">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+              </filter>
+            </defs>
+              <g>
+                <path 
+                   fill="none" 
+                   stroke="#00FFFB" 
+                   filter="url(#f1)"
+                 >
+                </path>
+                <path 
+                   stroke="#00FFFB"
+                   fill="none" 
+                >
+                </path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    <script src="index.js"></script>
+</body>
+</html>

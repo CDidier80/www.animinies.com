@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+html {
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+    font-family: Michroma;
+    font-size: 12px;
+    flex-grow: 1;
+}
+
+.app-flexbox {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+.slider-container {
+    overflow: hidden;
+  width: 100%;
+}
+
+.sliders-container-item {
+    justify-content: space-evenly;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-grow: .1;
+}
+
+.button-wrapper {
+    justify-content: space-evenly;
+    background-color: black;
+    margin: 0 auto 30px auto;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 5px;
+    width: 95%;
+}
+
+.button {
+    text-transform: uppercase;
+    transition: transform .1s;
+    background-color: black;
+    font-family: Michroma;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+    outline: none;
+    padding: 5px;
+    border: none;
+    width: 30%;
+}
+
+.button:hover { transform: scale(1.2); }
+
+.button.active { color: #7bff7b; }
+
+h3 {
+  color: white;
+  text-align: center;
+}
+
+.slider {
+  padding-top: 5px;
+  min-height: 25px;
+  margin: auto;
+  width: 80%;
+}
+
+.slider-input {
+    min-width: 80px;
+    width: 100%;
+}
+
+.button-electricity-item {
+    min-width: 640px;
+    margin-left: 7px;
+    flex-grow: 1;
+}
+
+.electric-container {
+    background-color: black;
+    justify-content: center;
+    align-content: stretch;
+    border-radius: 10px;
+    position: relative;
+    min-height: 80vh;
+    min-width: 637px;
+    display: flex;
+    margin: auto;
+    width: 95%;
+}
+  
+svg {
+    align-content: stretch;
+    flex-grow: 1;
+}
+
+
+.small-shadow {
+  box-shadow: 
+    0 0 4px rgba(202,228,225,0.98),
+    0 0 10px rgba(30,132,242,0.58),
+    0 0 15px rgba(30,132,242,0.88);
+}
+
+.big-shadow {
+  box-shadow: 
+    0 0 4px rgba(202,228,225,0.98),
+    0 0 10px rgba(30,132,242,0.58),
+    0 0 18px rgba(30,132,242,0.84),
+    0 0 24px rgba(30,132,242,0.88);
+}
+
+input[type=range]{ -webkit-appearance: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: #00FFFB;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    height: 1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    border: 1px solid #7bff7b;
+    -webkit-appearance: none;
+    background: black;
+    border-radius: 50%;
+    margin-top: -5px;
+    border: none;
+    height: 13px;
+    width: 13px;
+    box-shadow: 
+      0 0 2px rgba(123, 255, 123,1),
+      0 0 4px rgba(123, 255, 123,.8),
+      0 0 5px rgba(123, 255, 123,0.58);
+}
+
+input[type=range]:focus {
+    background: #00FFFB;
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #00FFFB;
+}
+
+@media (max-width: 1000px){
+  .button { font-size: 10px; }
+  
+  h3 { font-size: 12px; }
+  
+  .slider {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 935px){
+  
+  .button-electricity-item{
+      margin-top: 130px;
+      margin-left: 0;
+      flex-grow: 1;
+      min-width: 0;
+    }
+  
+  .sliders-container-item{
+    padding: 20px 0 20px 0;
+    margin: 20px 0 20px 0;
+    min-height: 250px;
+    max-width: 95%;
+    flex-grow: 1;
+  }
+  
+  .electric-container{ min-height: 50vh; }
+  
+  .button { font-size: 13px; }
+  
+  h3 { font-size: 15px; }
+  
+  .slider {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
